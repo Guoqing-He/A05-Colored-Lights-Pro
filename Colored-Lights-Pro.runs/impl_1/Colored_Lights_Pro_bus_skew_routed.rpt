@@ -1,0 +1,15 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Jul 31 17:22:45 2020
+| Host         : DESKTOP-D072BTV running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file Colored_Lights_Pro_bus_skew_routed.rpt -pb Colored_Lights_Pro_bus_skew_routed.pb -rpx Colored_Lights_Pro_bus_skew_routed.rpx
+| Design       : Colored_Lights_Pro
+| Device       : 7s15-ftgb196
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

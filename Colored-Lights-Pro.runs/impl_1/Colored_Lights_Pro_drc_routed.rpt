@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Jul 31 17:22:41 2020
+| Host         : DESKTOP-D072BTV running 64-bit major release  (build 9200)
+| Command      : report_drc -file Colored_Lights_Pro_drc_routed.rpt -pb Colored_Lights_Pro_drc_routed.pb -rpx Colored_Lights_Pro_drc_routed.rpx
+| Design       : Colored_Lights_Pro
+| Device       : xc7s15ftgb196-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 7
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| BUFC-1      | Warning  | Input Buffer Connections                                    | 1          |
+| DPIP-1      | Warning  | Input pipelining                                            | 2          |
+| PDRC-153    | Warning  | Gated clock check                                           | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer Camera_IIC_SDA_IOBUF/IBUF (in Camera_IIC_SDA_IOBUF macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP RGB_LED_Task0/inst/Clk_Divide_2_reg input RGB_LED_Task0/inst/Clk_Divide_2_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP RGB_LED_Task0/inst/Clk_Division1/Count1 input RGB_LED_Task0/inst/Clk_Division1/Count1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net All_key is a gated clock net sourced by a combinational pin stop_i_2/O, cell stop_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net RGB_LED_Task0/inst/Clk_Division1/Clk_2 is a gated clock net sourced by a combinational pin RGB_LED_Task0/inst/Clk_Division1/Light_Ok_i_2/O, cell RGB_LED_Task0/inst/Clk_Division1/Light_Ok_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RGB_LED_Task0/inst/Clk_Division1/Light_Ok_i_2 is driving clock pin of 21 cells. This could lead to large hold time violations. Involved cells are:
+RGB_LED_Task0/inst/Cnt_2_reg[0], RGB_LED_Task0/inst/Cnt_2_reg[1], RGB_LED_Task0/inst/Cnt_2_reg[2], RGB_LED_Task0/inst/Cnt_2_reg[3], RGB_LED_Task0/inst/Cnt_2_reg[4], RGB_LED_Task0/inst/Cnt_2_reg[5], RGB_LED_Task0/inst/Cnt_2_reg[6], RGB_LED_Task0/inst/Cnt_2_reg[7], RGB_LED_Task0/inst/Cnt_2_reg[8], RGB_LED_Task0/inst/Cnt_3_reg[0], RGB_LED_Task0/inst/Cnt_3_reg[10], RGB_LED_Task0/inst/Cnt_3_reg[1], RGB_LED_Task0/inst/Cnt_3_reg[2], RGB_LED_Task0/inst/Cnt_3_reg[3], RGB_LED_Task0/inst/Cnt_3_reg[4] (the first 15 of 21 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT stop_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+quit_reg, stop_reg
+Related violations: <none>
+
+
